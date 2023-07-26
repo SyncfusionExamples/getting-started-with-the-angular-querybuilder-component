@@ -1,0 +1,23 @@
+<ejs-querybuilder #queryBuilder [rule]="rules" (ruleChange)="updateRule($event)">
+  <e-columns>
+    <e-column field="EmployeeID" label="Employee ID" type="number"></e-column>
+    <e-column field="FirstName" label="First Name" type="string"></e-column>
+    <e-column field="TitleOfCourtesy" label="Title Of Courtesy" type="boolean" [values]="values"></e-column>
+    <e-column field="Title" label="Title" type="string"></e-column>
+    <e-column field="HireDate" label="Hire Date" type="date" format="dd/MM/yyyy"></e-column>
+    <e-column field="Country" label="Country" type="string"></e-column>
+    <e-column field="City" label="City" type="string"></e-column>
+  </e-columns>
+</ejs-querybuilder>
+
+<ejs-grid #dataGrid class="grid" [dataSource]="gridDataSource" width="80%" (created)="onGridCreated()">
+  <e-columns>
+      <e-column field="EmployeeID" headerText="Employee ID" width="90"></e-column>
+      <e-column field="FirstName" headerText="First Name" width="90"></e-column>
+      <e-column field="TitleOfCourtesy" headerText="Title Of Courtesy" width="90"></e-column>
+      <e-column field="Title" headerText="Title" width="120"></e-column>
+      <e-column field="HireDate" headerText="Hire Date" format="dd/MM/yyyy" width="120"></e-column>
+      <e-column field="Country" headerText="Country" width="120"></e-column>
+      <e-column field="City" headerText="City" width="120"></e-column>
+  </e-columns>
+</ejs-grid>
